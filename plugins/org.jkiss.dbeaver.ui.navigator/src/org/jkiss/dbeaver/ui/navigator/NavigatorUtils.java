@@ -556,8 +556,9 @@ public class NavigatorUtils {
     }
 
     public static void openNavigatorNode(Object node, IWorkbenchWindow window) {
-
+        openNavigatorNode(node, window, null);
     }
+
     public static void openNavigatorNode(Object node, IWorkbenchWindow window, Map<?, ?> parameters) {
         if (node instanceof DBNResource) {
             UIServiceSQL serviceSQL = DBWorkbench.getService(UIServiceSQL.class);
