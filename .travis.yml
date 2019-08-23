@@ -14,3 +14,5 @@ notifications:
 before_install: echo "MAVEN_OPTS='-Xmx2048m -XX:MaxPermSize=512m'" > ~/.mavenrc
 
 install: true
+after_success:
+  - bash <(curl -s https://copilot.blackducksoftware.com/ci/travis/scripts/upload)
